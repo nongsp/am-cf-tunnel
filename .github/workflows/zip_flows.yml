@@ -1,6 +1,9 @@
 name: zip_flows # 工作流程的名称
 
 on: 
+  on:
+  schedule:
+    - cron: '0 3 * * *'   # 每天凌晨3点自动执行（可根据需要调整时间）
   workflow_dispatch:  # 手动触发
   push: 
     paths: 
